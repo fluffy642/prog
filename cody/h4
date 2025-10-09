@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+    
+    /*char pismena[] = {
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+    };
+    char znaky[] = {'.', ',', '-', '#'};
+    int velikost = rand() % 6 + 5;
+    int x = velikost - (rand() % 5 + 1);
+    int y = velikost - (rand() % 5 + 1);
+
+    for (int i = 0; i < velikost; i++) {
+        printf("%c", pismena[rand() % 56 + 1]);
+        if (x == i) {
+            printf("%c", znaky[rand() % 4]);
+        }
+        if (y == i) {
+            printf("%d", rand() % 10);
+        }
+    }*/
+    
+    int delka = 10;
+    int znamky[delka] = {};
+    
+    for (int i = 0; i < delka; i++) {
+        znamky[i] = rand() % 5 + 1;
+    }
+    
+    float prumer = 0;
+    
+    int max = znamky[0];
+    int min = znamky[0];
+    
+    int cislo;
+    int jedna = 0;
+    int dva = 0;
+    int tri = 0;
+    int ctyri = 0;
+    int pet = 0;
+    
+    printf("Vsechny znamky zaka: ");
+    
+    for (int i = 0; i < delka; i++) {
+        printf("%d, ", znamky[i]);
+        cislo = znamky[i];
+        
+        prumer += znamky[i];
+        
+        if (max <= znamky[i]) {
+            max = znamky[i];
+        }
+        if (min >= znamky[i]) {
+            min = znamky[i];
+        }
+        
+        switch (cislo) {
+            case 1:
+                jedna++;
+                break;
+            case 2:
+                dva++;
+                break;
+            case 3:
+                tri++;
+                break;
+            case 4:
+                ctyri++;
+                break;
+            case 5:
+                pet++;
+                break;
+        }
+    }
+    
+    printf("\nPrumer znamek zaka: %.2f\n", prumer / delka);
+    printf("Nejlepsi znamka zaka: %d\n", min);
+    printf("Nejhorsi znamka zaka: %d\n", max);
+    
+    if (jedna >= dva && jedna >= tri && jedna >= ctyri && jedna >= pet) {
+        printf("1 je nejcastejsi znamka, bylo jich celkem: %d\n", jedna);
+    }
+    if (dva >= jedna && dva >= tri && dva >= ctyri && dva >= pet) {
+        printf("2 je nejcastejsi znamka, bylo jich celkem: %d\n", dva);
+    }
+    if (tri >= jedna && tri >= dva && tri >= ctyri && tri >= pet) {
+        printf("3 je nejcastejsi znamka, bylo jich celkem: %d\n", tri);
+    }
+    if (ctyri >= jedna && ctyri >= dva && ctyri >= tri && ctyri >= pet) {
+        printf("4 je nejcastejsi znamka, bylo jich celkem: %d\n", ctyri);
+    }
+    if (pet >= jedna && pet >= dva && pet >= tri && pet >= ctyri) {
+        printf("5 je nejcastejsi znamka, bylo jich celkem: %d\n", pet);
+    }
+    
+    printf("Znamka na vysvedceni: %.0f", prumer / delka);
+
+    return 0;
+}
