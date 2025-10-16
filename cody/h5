@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+	srand(time(NULL));
+
+	char karty[] = {'2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'};
+	int length = 7;
+	char kombinace[length] = {};
+	char karta;
+
+	printf("Karty v ruce: ");
+	for (int i = 0; i < 2; i++) {
+	    karta = karty[rand() % 13];
+	    printf("%c, ", karta);
+	    kombinace[i] = karta;
+	}
+	printf("\n");
+
+	printf("Karty na stole: ");
+	for (int i = 0; i < 5; i++) {
+	    karta = karty[rand() % 13];
+	    printf("%c, ", karta);
+	    kombinace[i + 2] = karta;
+	}
+	printf("\n");
+
+	for (int i = 0; i < length; i++) {
+	    printf("%c, ", kombinace[i]);
+	}
+
+	int dvojice;
+	int res = 0;
+
+	for (int i = 0; i < length; i++) {
+	    dvojice = kombinace[i];
+	    for (int j = 0; j < length; j++) {
+	        if (dvojice == kombinace[j]) {
+	            res++;
+	            if (res > 1) break;
+	        }
+	    }
+	}
+	printf("\n%d", res);
+
+	/*int celkem = 100000000;
+	float x, y;
+	int kruh = 0;
+	for (int i = 0; i < celkem; i++) {
+		x = (float) rand() / RAND_MAX;
+		y = (float) rand() / RAND_MAX;
+
+		if (((x * x) + (y * y)) < 1) {
+            kruh++;
+		}
+	}
+	double vysledek = (double) (kruh * 4) / celkem;
+	printf("%lf", vysledek);*/
+
+
+	return 0;
+}
