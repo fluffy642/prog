@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	/*char str[] = "Very long text";
+	int length = strlen(str);*/
+	/*for (int i = 0; i < length; i++) {
+	    if (input == str[i]) {
+	        printf("Znak je v stringu na pozici %d\n", i);
+	        res++;
+	    }
+	}
+	if (res == 0) {
+	    printf("Znak neni v stringu\n");
+	}*/
+	
+	/*char slovo[40];
+	
+	printf("Zadej slovo: ");
+	scanf(" %39s", slovo);
+	int length = strlen(slovo);
+	
+	for (int i = 1; i < length; i += 2) {
+	    slovo[i] = '#';
+	}
+	
+	printf("Slovo: %s\n", slovo);*/
+	
+	char slovo[40];
+	
+	printf("Zadej slovo: ");
+	scanf(" %39s", slovo);
+	int length = strlen(slovo);
+	int res = 0;
+
+	for (int i = 0; i < length; i++) {
+	    if (slovo[i] == 'a' || slovo[i] == 'e' || slovo[i] == 'i' || slovo[i] == 'o' || slovo[i] == 'u' || slovo[i] == 'y') {
+	        res++;
+	    }
+	}
+	printf("Ve slove %d malych samohlasek\n", res);
+	
+
+	return 0;
+}
