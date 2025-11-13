@@ -1,0 +1,149 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    
+    //uloha palindrom
+    
+    /*char str1[40];
+	char str2[40];
+	int res = 0;
+	
+	printf("Zadej 1. slovo: ");
+	scanf(" %39s", str1);
+	printf("Zadej 2. slovo: ");
+	scanf(" %39s", str2);
+	
+	int length1 = strlen(str1);
+	
+	for (int i = 0; i < length1; i++) {
+	    if (str1[i] != str2[i]) {
+	        res++;
+	    }
+	}
+	if (res > 0) {
+	    printf("Slova se nerovnaji");
+	} else {
+	    printf("Slova se rovnaji");
+	}*/
+	
+	//uloha 3.7
+	
+	/*char str[40];
+	printf("Zadej slovo: ");
+	scanf(" %39s", str);
+	int length = strlen(str);
+	int res = 0;
+    
+    for (int i = 0; i < (length / 2); i++) {
+	    if (str[i] != str[length - i - 1]) {
+	        res++;
+	    }
+	}
+    if (res > 0) {
+	    printf("Slovo neni palindrom");
+	} else {
+	    printf("Slovo je palindrom");
+	}*/
+	
+	//uloha 3.8 predpona
+	
+	/*char str1[40];
+	char str2[40];
+	char strRes[40];
+	int res = 0;
+	
+	printf("Zadej 1. slovo: ");
+	scanf(" %39s", str1);
+	printf("Zadej 2. slovo: ");
+	scanf(" %39s", str2);
+	
+	int length = strlen(str1);
+	
+	for (int i = 0; i < length; i++) {
+	    if (str1[i] == str2[i]) {
+	        strRes[i] = str1[i];
+	    } else {
+	        break;
+	    }
+	}
+	if (strRes[0] == str1[0]) {
+	    printf("Spolecna predpona: %s", strRes);
+	} else {
+	    printf("Spolecna predpona neni");
+	}*/
+	
+	//uloha 3.6 podretezec
+	
+	/*char str[40];
+	char substr[40];
+	int res = 0;
+	int misto;
+	
+	printf("Zadej text: ");
+	scanf(" %39s", str);
+	printf("Zadej podretezec: ");
+	scanf(" %39s", substr);
+	
+	int strlength = strlen(str);
+	int substrlength = strlen(substr);
+	
+	for (int i = 0; i < strlength; i++) {
+	    if (str[i] == substr[res]) {
+	        res++;
+	        misto = i;
+	    }
+	}
+	
+	if (res == substrlength) {
+	    printf("Podretezec nalezen v indexu %d", misto - res + 1);
+	} else {
+	    printf("Podretezec nenalezen");
+	}*/
+	
+	//uloha 3.9 anagram
+	
+	/*char str1[40];
+	char str2[40];
+	int res = 0;
+	
+	printf("Zadej 1. text: ");
+	scanf(" %39s", str1);
+	printf("Zadej 2. text: ");
+	scanf(" %39s", str2);
+	
+	int length1 = strlen(str1);
+	int length2 = strlen(str2);
+	
+	for (int i = 0; i < length2; i++) {
+	    if (strchr(str1, str2[i]) != NULL) {
+	        res++;
+	    }
+	}
+	
+	if (res == length2) {
+	    printf("Jde o anagram");
+	} else {
+	    printf("Nejde o anagram");
+	}*/
+	
+	//uloha 3.10.1 pocet slov
+	
+	char str[] = "Tato veta je textovaci.";
+	int res = 1;
+
+	int length = strlen(str);
+	
+	for (int i = 0; i < length; i++) {
+	    if (strchr(str, 't') != NULL) {
+	        res++;
+	    }
+	}
+	
+	    printf("%d", res);
+	
+	
+	
+
+    return 0;
+}
