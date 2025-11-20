@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    //uloha heslo
+    
+    /*char heslo[40];
+    int velke = 0;
+    int male = 0;
+    int cislo = 0;
+    int znak = 0;
+    
+    printf("Zadej heslo: ");
+    scanf(" %39s", heslo);
+    int length = strlen(heslo);
+    
+    for (int i = 0; i < length; i++) {
+        if (heslo[i] >= 'A' && heslo[i] <= 'Z') {
+            velke++;
+        } else if (heslo[i] >= 'a' && heslo[i] <= 'z') {
+            male++;
+        } else if(heslo[i] >= '0' && heslo[i] <= '9') {
+            cislo++;
+        } else if(heslo[i] == '#' || heslo[i] == '.' || heslo[i] == ',' || heslo[i] == '/' || heslo[i] == '&' || heslo[i] == '|') {
+            znak++;
+        }
+    }
+    
+    if (velke >= 2 && male >= 3 && cislo >= 1 && znak >= 1) {
+        printf("Heslo %s je dobre", heslo);
+    } else printf("Heslo je spatne");*/
+    
+    //uloha caesarova sifra
+    
+    char slovo[40];
+    int posun;
+    int pismeno;
+    
+    printf("Zadej slovo: ");
+    scanf(" %39s", slovo);
+    int length = strlen(slovo);
+    printf("Zadej posun: ");
+    scanf("%d", &posun);
+    
+    
+    for (int i = 0; i < length; i++) {
+        slovo[i] = slovo[i] + posun;
+        if (slovo[i] > 'Z' && slovo[i] < 'a') {
+            slovo[i] = slovo[i] - 26;
+        }
+        if (slovo[i] > 'z') {
+            slovo[i] = slovo[i] - 26;
+        }
+    }
+    
+    printf("%s", slovo);
+    
+
+    return 0;
+}
