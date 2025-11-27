@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    //zadani sibenice
+
+    int hp = 5;
+    char slovo[] = "Hello";
+    int length = strlen(slovo);
+    char pismeno;
+    char odhad[40];
+    char pomocne[40];
+    strcpy(pomocne, slovo);
+
+    for (int i = 0; i < length; i++) pomocne[i] = '-';
+
+    
+    while (hp != 0) {
+        printf("Slovo: %s\n", pomocne);
+        printf("\n");
+        
+        printf("Hadej pismeno: ");
+        scanf(" %c", &pismeno);
+        
+        if (strchr(slovo, pismeno) != NULL) {
+            printf("Pismeno je ve slove v pozici %ld\n", strchr(slovo, pismeno) - slovo + 1);
+            pomocne[strchr(slovo, pismeno) - slovo] = pismeno;
+        } else {
+            printf("Pismeno neni ve slove\n");
+            hp--;
+        }
+        printf("\nHP - %d\n", hp);
+        
+        printf("\nJake slovo?: ");
+        scanf(" %39s", odhad);
+        if (strcmp(slovo, odhad) == 0) {
+            printf("Odhadl jsi slovo\n\n");
+            break;
+        } else {
+            printf("Pokracuj hadani\n\n");
+        }
+    }
+    
+    //zadani wordle
+    
+    /*int hp = 6;
+    char slovo[] = "WORDLE";
+    int length = strlen(slovo);
+    char odhad[40];
+    
+    printf("Slovo ma %d pismen (vsechna pismena jsou velka)\n", length);
+    
+    while (hp != 0) {
+        printf("\n");
+        printf("Odhadni slovo: ");
+        scanf(" %39s", &odhad);
+        
+        if (strcmp(slovo, odhad) == 0) {
+            printf("\nOdhadl jsi slovo");
+            break;
+        } else {
+            for (int i = 0; i < length; i++) {
+                if (slovo[i] == odhad[i]) {
+                    printf("Pismeno %c je na spravnem miste\n", odhad[i]);
+                } else if (strchr(slovo, odhad[i]) != NULL) {
+                    printf("Pismeno %c je na spatnem miste\n", odhad[i]);
+                } else {
+                    printf("Pismeno %c neni ve slove\n", odhad[i]);
+                }
+            }
+            printf("Pokracuj hadani\n");
+        }
+        hp--;
+        printf("HP - %d\n", hp);
+    }
+    if (hp == 0) {
+        printf("\nJsi prohral, hadane slovo: %s", slovo);
+    }*/
+
+    return 0;
+}
