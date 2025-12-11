@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <string.h>
+
+char znak = '*';
+
+void trojuhelnik(int vyska) {
+    for (int i = 0; i < vyska; i++) {
+        for (int j = 0; j <= i; j++) {
+            printf("%c ", znak);
+        }
+        printf("\n");
+    }
+}
+
+void stojan(int vyska) {
+    for (int i = 0; i < vyska; i++) {
+        printf("%c ", znak);
+        if(i == vyska - 1) {
+            printf("%c %c %c %c ", znak, znak, znak, znak);
+        }
+        printf("\n");
+    }
+}
+
+void darek(int pocet) {
+    for(int i = 0; i < pocet; i++) {
+        printf("  *       *  \n");
+        printf("    *   *    \n");
+        printf("* * * * * * *\n");
+        printf("*     *     *\n");
+        printf("* * * * * * *\n");
+        printf("*     *     *\n");
+        printf("* * * * * * *\n");
+        printf("\n");
+    }
+    
+}
+
+void stromecek(int pocet, int vyska, int darky) {
+    for (int i = 0; i < pocet; i++) {
+        trojuhelnik(vyska);
+    }
+    stojan(vyska);
+    printf("\n");
+    darek(darky);
+}
+
+int validujPin(int pin) {
+    if (pin > 9999 || pin % 4 != 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int validujDatumNarozeni(int rok, int mesic, int den) {
+    if (rok < 1900 || rok > 2025 || mesic < 1 || mesic > 12 || den < 1 || den > 30) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    /*int pocetUzivatele;
+    int vyskaUzivatele;
+    int darkyUzivatele;
+
+    printf("Zadej pocet trojuhelniku stromu: ");
+    scanf("%d", &pocetUzivatele);
+    printf("Zadej vysku stromu: ");
+    scanf("%d", &vyskaUzivatele);
+    printf("Kolik darku chces obdrzet? ");
+    scanf("%d", &darkyUzivatele);
+    stromecek(pocetUzivatele, vyskaUzivatele, darkyUzivatele + 1);*/
+    
+    printf("%d", validujDatumNarozeni(1019, 8, 23));
+    printf("%d", validujDatumNarozeni(3019, 8, 23));
+    printf(":");
+    printf("%d", validujDatumNarozeni(2019, 15, 23));
+    printf("%d", validujDatumNarozeni(2019, 8, 63));
+
+    return 0;
+}
