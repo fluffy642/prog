@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+char znak = '*';
+
+float objem(float vyska, float polomer) {
+    return vyska * M_PI * polomer * polomer;
+}
+
+float objemDortu(float vyska1, float polomer1, float vyska2, float polomer2, float vyska3, float polomer3) {
+    float objem1 = objem(vyska1, polomer1);
+    float objem2 = objem(vyska2, polomer2);
+    float objem3 = objem(vyska3, polomer3);
+    return objem1 + objem2 + objem3;
+}
+
+void dort(float vyska1, float polomer1, float vyska2, float polomer2, float vyska3, float polomer3) {
+    for (int i = 1; i <= vyska1; i++) {
+        for (int n = 0; n < (polomer3 - polomer2) / 2; n++) {
+            printf("  ");
+            printf("  ");
+        }
+        
+        if (i == 1 || i == vyska1) {
+            for (int j = 0; j < polomer1; j++) {
+                printf("%c ", znak);
+            }
+        } else {
+            printf("%c ", znak);
+            for (int j = 0; j < polomer1 - 2; j++) {
+                printf("  ");
+            }
+            printf("%c ", znak);
+        }
+        
+        printf("\n");
+    }
+    for (int i = 1; i <= vyska2; i++) {
+        for (int n = 0; n < (polomer3 - polomer2) / 2; n++) {
+            printf("  ");
+        }
+        
+        if (i == 1 || i == vyska2) {
+            for (int j = 0; j < polomer2; j++) {
+                printf("%c ", znak);
+            }
+        } else {
+            printf("%c ", znak);
+            for (int j = 0; j < polomer2 - 2; j++) {
+                printf("  ");
+            }
+            printf("%c ", znak);
+        }
+        printf("\n");
+    }
+    for (int i = 1; i <= vyska3; i++) {
+        if (i == 1 || i == vyska3) {
+            for (int j = 0; j < polomer3; j++) {
+                printf("%c ", znak);
+            }
+        } else {
+            printf("%c ", znak);
+            for (int j = 0; j < polomer3 - 2; j++) {
+                printf("  ");
+            }
+            printf("%c ", znak);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    float vyska1 = 3;
+    float polomer1 = 5;
+    float vyska2 = 4;
+    float polomer2 = 7;
+    float vyska3 = 5;
+    float polomer3 = 9;
+    printf("%.3f\n", objemDortu(vyska1, polomer1, vyska2, polomer2, vyska3, polomer3));
+    dort(vyska1, polomer1, vyska2, polomer2, vyska3, polomer3);
+
+    return 0;
+}
