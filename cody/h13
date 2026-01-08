@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int odpocetSekund(int hodiny, int minuty, int sekundy) {
+    return ((23 - hodiny) * 3600) + ((59 - minuty) * 60) + (59 - sekundy) + 1;
+}
+
+int prestupnost(int rok) {
+    int res;
+    if (rok % 4 == 0) {
+        if (rok % 100 == 0) {
+            if (rok % 400 == 0) {
+                rok = 1;
+            } else {
+                rok = 0;
+            }
+        } else {
+            rok = 1;
+        }
+    } else {
+        rok = 0;
+    }
+    return rok;
+}
+
+int delkaPlaylistu (int arr[], int length) {
+    int res = 0;
+    for (int i = 0; i < length; i++) {
+        res += arr[i];
+    }
+    return res;
+}
+
+int pripitky(int lidi) {
+    int res = 0;
+    for (int i = lidi; i >= 1; i--) {
+        for (int j = 1; j < i; j++) {
+            res += 1;
+        }
+    }
+    return res;
+}
+
+int mocnina (int cislo, int mocnitel) {
+    if (mocnitel == 1) {
+        return cislo;
+    }
+    return cislo * mocnina(cislo, --mocnitel);
+    
+}
+
+int main() {
+    //  cas do pulnoci
+    /*int res = odpocetSekund(23, 58, 50);
+    printf("Zbyva %d vterin", res);*/
+    
+    //  prestupnost
+    //printf("%d", prestupnost(2025));
+    
+    //  delka playlistu
+    /*int arr[] = {126, 189, 55, 332};
+    int length = 4;
+    printf("Delka playlistu: %d", delkaPlaylistu(arr, length));*/
+    
+    //  pripitky
+    /*int pocet = 3;
+    printf("Pripitky: %d", pripitky(pocet));*/
+    
+    printf("%d", mocnina(5, 3));
+    
+
+    return 0;
+}
