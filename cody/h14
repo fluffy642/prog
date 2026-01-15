@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int soucetDelitelu (int num) {
+    int res = 0;
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            res += i;
+        }
+    }
+    return res;
+}
+
+int dokonale (int num) {
+    if (soucetDelitelu(num) == num * 2) {
+        return 1;
+    }
+    return 0;
+}
+
+void ramecek (int sirka, int vyska) {
+    if (sirka < 2 || vyska < 2) {
+        printf("CHYBA");
+        return;
+    }
+    for (int i = 0; i < vyska; i++) {
+        if (i == 0 || i == vyska - 1) {
+            for (int j = 0; j < sirka; j++) {
+                printf("#"); 
+            }
+        } else {
+            for (int j = 0; j < sirka; j++) {
+                if (j == 0 || j == sirka - 1) {
+                    printf("#"); 
+                } else {
+                    printf(" "); 
+                }
+            }
+
+        }
+        printf("\n"); 
+    }
+
+}
+
+int main() {
+    printf("%d\n", soucetDelitelu(6));
+    printf("%d\n", dokonale(28));
+
+
+    return 0;
+}
