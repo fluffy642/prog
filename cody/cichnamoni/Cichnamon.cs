@@ -24,4 +24,24 @@
         Console.WriteLine($"Aktualni zdravi: {HP} HP");
         Console.WriteLine($"Ma utoky: \"{UtokZakl.Nazev}\" a \"{UtokSpec.Nazev}\"");
     }
+
+    public void ProvestUtokZakl(Cichnamon hrac, Trener trener)
+    {
+        trener.AktualniCichnamon.HP -= hrac.UtokZakl.Poskozeni;
+    }
+
+    public void ProvestUtokSpec(Cichnamon hrac, Trener trener)
+    {
+        trener.AktualniCichnamon.HP -= hrac.UtokSpec.Poskozeni;
+    }
+
+    public void Uzdraveni(int hp)
+    {
+        HP += hp;
+    }
+
+    public bool JeNazivu()
+    {
+        return HP > 0;
+    }
 }
