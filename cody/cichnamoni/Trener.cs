@@ -1,8 +1,11 @@
-﻿public class Trener
+using System;
+using System.Collections.Generic;
+
+public class Trener
 {
     public string Jmeno { get; set; }
     public int Level = 0;
-    public List<Cichnamon> VsechnyCichnamony { get; set; } 
+    public List<Cichnamon> VsechnyCichnamony { get; set; }
     public Cichnamon AktualniCichnamon { get; set; }
 
     public Trener(string jmeno, List<Cichnamon> vsechnyCichnamony)
@@ -14,8 +17,8 @@
 
     public void VypisInfo()
     {
-        Console.WriteLine($"Trener \"{Jmeno}\"");
-        Console.WriteLine($"Level: {Level}");
-        Console.WriteLine($"Aktualni cichnamon: {AktualniCichnamon}");
+        Console.WriteLine($"  Trener \"{Jmeno}\"");
+        Console.WriteLine($"  Level: {Level}");
+        Console.WriteLine($"  Aktualni cichnamon: {AktualniCichnamon.Jmeno}");
     }
 }
