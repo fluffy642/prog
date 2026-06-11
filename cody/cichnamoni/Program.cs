@@ -22,7 +22,7 @@ public class Program
 
         for (int j = 1; ukoncitProgram != true; j++)
         {
-            Console.WriteLine($"{jmeno} ma {levelHrace} \n {trener.Jmeno} ma {trener.Level} level");
+            Console.WriteLine($"{jmeno} ma {levelHrace} \n{trener.Jmeno} ma {trener.Level} level");
             Console.WriteLine($"Mate {cichnamony.Count} cichnamony: ");
             for (int k = 0; k < cichnamony.Count; k++)
             {
@@ -128,7 +128,7 @@ public class Program
                 if (!cichnamon.JeNazivu())
                 {
                     pokracovat = false;
-                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {trener.Jmeno}");
+                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {trener.Jmeno}, jeho cichnamon ma ted 20 HP navic");
                     trener.Level++;
                     cichnatrener.HP = cichnatrener.MaxHP;
                     Console.WriteLine($"\nJsi prisel o cichnamona \"{cichnamon.Jmeno}\"");
@@ -140,7 +140,7 @@ public class Program
                     levelHrace++;
                     cichnamon.HP = cichnamon.MaxHP;
                     trener.VsechnyCichnamony.Remove(cichnatrener);
-                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {jmeno}");
+                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {jmeno}, tvuj cichnamon ma ted 20 HP navic");
                     Console.Write($"\nChces pridat cichnamona? (napis ano nebo ne): ");
                     string odpovedPridani = Console.ReadLine();
                     if (odpovedPridani == "ano" || odpovedPridani == "ANO")
