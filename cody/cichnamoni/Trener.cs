@@ -11,7 +11,13 @@ public class Trener
     public Trener(string jmeno, List<Cichnamon> vsechnyCichnamony)
     {
         Jmeno = jmeno;
-        VsechnyCichnamony = vsechnyCichnamony;
+        VsechnyCichnamony = vsechnyCichnamony.Select(x => new Cichnamon(
+            x.Jmeno,
+            x.MaxHP,
+            x.Bonus,
+            x.UtokZakl,
+            x.UtokSpec
+        )).ToList();
         AktualniCichnamon = VsechnyCichnamony[new Random().Next(0, 3)];
     }
 
