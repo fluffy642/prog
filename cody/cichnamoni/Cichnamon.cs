@@ -55,6 +55,6 @@ public class Cichnamon
 
     public bool JeNazivu()
     {
-        return HP >= 0;
+        return HP > 0;
     }
 }
