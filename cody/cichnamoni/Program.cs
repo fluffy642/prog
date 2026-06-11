@@ -128,9 +128,9 @@ public class Program
                 if (!cichnamon.JeNazivu())
                 {
                     pokracovat = false;
-                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {trener.Jmeno}, jeho cichnamon ma ted 20 HP navic");
+                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {trener.Jmeno}, jeho cichnamon ma ted 30 HP navic");
                     trener.Level++;
-                    cichnatrener.HP = cichnatrener.MaxHP;
+                    cichnatrener.HP = cichnatrener.MaxHP + 30;
                     Console.WriteLine($"\nJsi prisel o cichnamona \"{cichnamon.Jmeno}\"");
                     cichnamony.Remove(cichnamon);
                 }
@@ -138,9 +138,9 @@ public class Program
                 {
                     pokracovat = false;
                     levelHrace++;
-                    cichnamon.HP = cichnamon.MaxHP;
+                    cichnamon.HP = cichnamon.MaxHP + 30;
                     trener.VsechnyCichnamony.Remove(cichnatrener);
-                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {jmeno}, tvuj cichnamon ma ted 20 HP navic");
+                    Console.WriteLine($"Hra ukoncena. \n\nZvitezil {jmeno}, tvuj cichnamon ma ted 30 HP navic");
                     Console.Write($"\nChces pridat cichnamona? (napis ano nebo ne): ");
                     string odpovedPridani = Console.ReadLine();
                     if (odpovedPridani == "ano" || odpovedPridani == "ANO")
