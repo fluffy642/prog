@@ -18,6 +18,11 @@ public class Trener
             x.UtokZakl,
             x.UtokSpec
         )).ToList();
+        VyberCichnamona();
+    }
+
+    public void VyberCichnamona() 
+    {
         AktualniCichnamon = VsechnyCichnamony[new Random().Next(0, VsechnyCichnamony.Count)];
     }
 
