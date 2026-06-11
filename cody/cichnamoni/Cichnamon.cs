@@ -40,12 +40,12 @@ public class Cichnamon
 
     public void ProvestUtokZakl(Cichnamon hrac, Cichnamon protihrac)
     {
-        protihrac.HP -= hrac.UtokZakl.Poskozeni;
+        protihrac.HP = protihrac.HP - hrac.UtokZakl.Poskozeni - hrac.Bonus;
     }
 
     public void ProvestUtokSpec(Cichnamon hrac, Cichnamon protihrac)
     {
-        protihrac.HP -= hrac.UtokSpec.Poskozeni;
+        protihrac.HP = protihrac.HP - hrac.UtokSpec.Poskozeni - hrac.Bonus;
     }
 
     public void Uzdraveni(int hp)
