@@ -31,6 +31,7 @@ public class Program
             }
             Console.Write("\nZvol si jednoho: ");
             Cichnamon cichnamon = cichnamony[int.Parse(Console.ReadLine()) - 1];
+            trener.VyberCichnamona();
             Cichnamon cichnatrener = trener.AktualniCichnamon;
 
             //Zacatek hry
