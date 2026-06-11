@@ -22,7 +22,7 @@ public class Program
 
         for (int j = 1; ukoncitProgram != true; j++)
         {
-
+            Console.WriteLine($"{jmeno} ma {levelHrace} \n {trener.Jmeno} ma {trener.Level} level");
             Console.WriteLine($"Mate {cichnamony.Count} cichnamony: ");
             for (int k = 0; k < cichnamony.Count; k++)
             {
