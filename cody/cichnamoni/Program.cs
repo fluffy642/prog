@@ -171,16 +171,22 @@ public class Program
             if (cichnamony.Count == 0)
             {
                 ukoncitProgram = true;
-            }
-            Console.Write("\nChcete ukoncit program? (napis ano nebo ne):");
-            string odpovedUkonceni = Console.ReadLine();
-            if (odpovedUkonceni == "ano" || odpovedUkonceni == "ANO")
+                Console.Write("\nUz nemate zadneho cichnamona! Konec souboje");
+            } 
+            else if (trener.VsechnyCichnamony.Count == 0) 
             {
                 ukoncitProgram = true;
+                Console.Write("\nTrener nema zadneho cichnamona! Konec souboje");
+            } 
+            else {
+                Console.Write("\nChcete ukoncit program? (napis ano nebo ne):");
+                string odpovedUkonceni = Console.ReadLine();
+                if (odpovedUkonceni == "ano" || odpovedUkonceni == "ANO")
+                {
+                    ukoncitProgram = true;
+                }
+                Console.WriteLine($"\nKonec {j}. hry\n");
             }
-            Console.WriteLine($"\nKonec {j}. hry\n");
         }
-
-        
     }
 }
