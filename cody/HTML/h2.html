@@ -1,0 +1,258 @@
+mm<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<style>
+#chiken {
+    margin: auto;
+    margin-top: 1500px;
+   
+    align-items: center;
+    display: flex;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seznam {
+    color: blue;
+}
+
+th, td {
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    border: 2px solid;
+    font-size: 30px;
+    padding: 5px;
+    
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+ 
+.sub-text {
+    margin-top: 3px;
+    font-size: 13px;
+}
+</style>
+ 
+<body>
+   
+    <p>Nezlomitelna mezera je &amp;nbsp &nbsp; &nbsp; &nbsp; &nbsp; AHOj &copy; &amp; &times; &alpha; &gt; &lt; &ndash; </p>
+    
+    <ul>
+        <li>1</li>
+       
+        <li>2</li>
+ 
+        <li>3</li>
+        <ul>
+            <li>pam pam</li>
+            <li>bum bum</li>
+            <li>pif paf</li>
+        </ul>
+ 
+        <li>4</li>
+ 
+        <li>5
+            <ul>
+                <li>pam pam</li>
+                <li>bum bum</li>
+                <li>pif paf</li>
+            </ul>
+        </li>
+       
+    </ul>
+ 
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <ul>
+            <li>pam pam</li>
+            <li>bum bum</li>
+            <li>pif paf</li>
+        </ul>
+        <li>four</li>
+        <li>five</li>
+    </ol>
+
+    <dl>
+        <dt>SW</dt>
+        <dd>aplikace</dd>
+
+        <dt>HW</dt>
+        <dd>fyzicke casti PC</dd>
+
+        <dt>three</dt>
+        <dd>blabla</dd>
+    </dl>
+
+    <br><br><br>
+
+    <div>
+        <ul>
+            <li><b>Usporadany seznam </b>
+                <b class="seznam">&lt;OL&gt;</b>
+                <ul>
+                    <li>z angl. Ordered List</li>
+                    <li>parametr type (a | A | i | I | 1)</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Neusporadany seznam </b>
+                <b class="seznam">&lt;UL&gt;</b>
+                <ul>
+                    <li>z angl. Unordered List</li>
+                    <li>parametr type (disc | circle | square)</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Polozka ne/usporadaneho seznamu <br></b>
+                <b class="seznam">&lt;LI&gt;</b>
+                <ul>
+                    <li>z angl. List item</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Vykladovy seznam </b>
+                <b class="seznam">&lt;DL&gt;</b>
+                <ul>
+                    <li>z angl. Definition List</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Polozka vykladoveho seznamu </b>
+                <b class="seznam">&lt;DT&gt;<br>&lt;DD&gt;</b>
+                <ul>
+                    <li>z angl. Definition Term, Definition Description</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+ 
+    <br><br><br>
+
+    <!-- <table border="2px">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table> -->
+
+    <br><br><br>
+
+    <div class="rozvrh">
+        <table border="2px">
+            <tr>
+                <th colspan="10">Rozvrh</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>1
+                    <p class="sub-text">8:00-8:45</p>
+                </th>
+                <th>2
+                    <p class="sub-text">8:55-9:40</p>
+                </th>
+                <th>3
+                    <p class="sub-text">10:00-10:45</p>
+                </th>
+                <th>4
+                    <p class="sub-text">10:55-11:40</p>
+                </th>
+                <th>5
+                    <p class="sub-text">11:50-12:35</p>
+                </th>
+                <th>4
+                    <p class="sub-text">12:45-13:30</p>
+                </th>
+                <th>7
+                    <p class="sub-text">13:40-14:25</p>
+                </th>
+                <th>8
+                    <p class="sub-text">14:35-15:20</p>
+                </th>
+                <th>9
+                    <p class="sub-text">15:30-16:15</p>
+                </th>
+            </tr>
+            <tr>
+                <th>Po
+                    <p class="sub-text">28.9.</p>
+                </th>
+                <td colspan="9">Den ceske statnosti</td>
+            </tr>
+            <tr>
+                <th>Ut
+                    <p class="sub-text">29.9.</p>
+                </th>
+                <td>CJL</td>
+                <td>M</td>
+                <td>OSy</td>
+                <td>EaP</td>
+                <td>AJ</td>
+                <td>TV</td>
+                <td> </td>
+                <td colspan="2">Osyc</td>
+            </tr>
+            <tr>
+                <th>St
+                    <p class="sub-text">30.9.</p>
+                </th>
+                <td>CJL</td>
+                <td>ON</td>
+                <td>M</td>
+                <td>EaP</td>
+                <td>TV</td>
+                <td>IS</td>
+                <td colspan="3"> </td>
+            </tr>
+            <tr>
+                <th>Ct
+                    <p class="sub-text">1.10.</p>
+                </th>
+                <td> </td>
+                <td colspan="3">Prg2</td>
+                <td>IS</td>
+                <td> </td>
+                <td>M</td>
+                <td colspan="2"> </td>
+            </tr>
+            <tr>
+                <th>Pa
+                    <p class="sub-text">2.10.</p>
+                </th>
+                <td colspan="2">Prog</td>
+                <td>OSy</td>
+                <td>CJL</td>
+                <td colspan="2">Prg2</td>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+ 
+    <img id="chiken" src="https://th.bing.com/th/id/OIP.AuBsfMz8YI0QEJro7Bi3BgHaHa?w=167&h=180&c=7&r=0&o=7&pid=1.7&rm=3" height="1100px" width="1100px" ></img>  
+   
+</body>
+</html>
+ 
