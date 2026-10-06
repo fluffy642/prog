@@ -1,0 +1,31 @@
+- alias blabla='ls -la' = prikaz blabla ted dela "ls -la" 
+
+  - unalias blabla = vymazat alias 
+
+- history = ukazat historii 
+
+  - -c = vymazat 
+
+- find ./ -name Documents = najit v aktualnim souboru nazev "Documents" 
+
+- 2>/dev/null = chybove hlasky vymazat 
+
+- df -h /bin = ukazat kolik je mista v /bin (-h = zaokrouhlit na MB nebo GB) 
+
+- du –sh /bin = ukazat kolik MB jsou vsechny soubory v bin  
+
+- watch data = kazde 2s spousti prikaz data 
+
+- ps = ukazat bezici procesy 
+
+  - ps aux = vsechny procesy + podrobnosti 
+
+- kill 5851 = operace se sama ukonci s UID 5851 napr. Kalkulacka 
+
+  - kill -9 5851 = system uzavira operaci 
+
+- xcalc = spustit kalkulacku ktera blokuje terminal 
+
+  - xcalc & = neblokuje terminal 
+
+ 
