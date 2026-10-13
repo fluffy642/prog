@@ -16,3 +16,9 @@
 - tar -cvf zaloha.tar /home/sysadmin = vytvorit zalohu
   - tar -xvf zaloha.tar = obsah zalohy
 - md5sum zaloha.tar = vypsat hash fajlu
+- sh = vstup do shellu
+- vypsat aktualni shell nebo bash:
+  - echo $0
+  - readline /proc/$$/exe
+  - echo $SHELL
+- nano soubor = vytovrit a/nebo editovat soubor  
