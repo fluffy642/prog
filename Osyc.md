@@ -21,4 +21,13 @@
   - echo $0
   - readline /proc/$$/exe
   - echo $SHELL
-- nano soubor = vytovrit a/nebo editovat soubor  
+- nano soubor = vytovrit a/nebo editovat soubor
+- bash nebo nano skript.bash :
+  - #!/usr/bin/env bash = vzdy na zacatku
+  - exit 0 = spravne ukonceni 
+  - echo "Ahoj"
+  - #komentar
+  - res=$1 = zalozit promenu s 1 parametrem
+  - cesta=~/ = ulozit cestu /home/sysadmin/
+  - bash -x skript.bash = spustit ladeni pro chyby
+
