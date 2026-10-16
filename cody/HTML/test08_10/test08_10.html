@@ -11,93 +11,176 @@
         margin-right: 200px;
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.6;
+        background-color: #f1f1f1;
     }
-    p {
-        text-align: justify;
-    }
-    #zacatek {
-        width: auto;
-        height: auto;
-    }
-    .header {
-        background-color: rgb(82, 82, 236);
-        /* font-size: 20px; */
+    h1 {
+        background-color: #0066CC;
         color: white;
         text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         border-radius: 10px;
+    }
+    .menu {
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        color: #0066CC;
+    }
+    .menu a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: #0066CC;
+    }
+    .seznam {
+        background-color: white;
+        border-radius: 10px;
+        text-align: left;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .vyklad {
+        padding: 15px 40px;
+    }
+    .vyklad dt {
+        
+    }
+    h2 {
+        color: #0066CC;
+        border-bottom: #0066CC solid 3px;
+        margin-top: 40px;
+    }
+    h3 {
+        color: #004c99;
+    }
+    img {
+        border: 3px solid lightsteelblue;
+        border-radius: 5px;
+    }
+    tr, td, th{
+        padding: 10px 20px;
+    }
+    table, tr, td, th {
+        border: 1px solid lightsteelblue;
+        text-align: center;
+        border-collapse: separate;
+        border-spacing: 0px;
+    }
+    table {
+        width: 100%;
+    }
+    .table1 {
+        background-color: #0066CC;
+        color: white;
+    }
+    .table2 {
+        background-color: rgb(244, 248, 253);
+    }
+    .table3 {
+        background-color: white;
+    }
+    hr {
+        color: #cccccc;
+        margin: 30px 0;
+    }
+    .footer {
+        text-align: center;
+        font-style: italic;
     }
 </style>
 <body>
-    <div class="header"><h1 id="zacatek">Průvodce Prahou</h1></div>
-    
-    <p>Vitejte na jednoduché stránce věnované hlavnímu městu České republiky. Na této stránce najdete informace o Praze, zajímavá místa a seznam památek.</p>
-    <p><a href="#pamatky">Památky</a> | <a href="#navstevnost">Návštěvnost památek</a> | <a href="#entity">Znákové entity</a></p>
+    <div class="header">
+        <h1 id="zacatek">Průvodce Prahou</h1>
+        <p>Vitejte na jednoduché stránce věnované hlavnímu městu České republiky. Na této stránce najdete informace o Praze, zajímavá místa a seznam památek.</p>
+        <p class="menu"><a href="#pamatky">Památky</a> | <a href="#navstevnost">Návštěvnost památek</a> | <a href="#entity">Znákové entity</a></p>
+    </div>
+
     <hr>
+
     <h2>O Praze</h2>
     <p>Praha je hlavní město České republiky. <br>
     Leží na řece Vltavě.<br>
     Patří mezi nejnavštěvovanější města v Evropě.</p>
     <p>Historické centrum města je zapsáno na seznamu UNESCO.</p>
+
     <h2 id="pamatky">Nejznámější památky</h2>
+
     <h3>Seznam památek</h3>
-    <ul>
-        <li>Pražský hrad</li>
-        <li>Karlův most</li>
-        <li>Staroměstské náměstí</li>
-        <li>Petřínská rozhledna</li>
-    </ul>
+    <div class="seznam">
+        <ul>
+            <li>Pražský hrad</li>
+            <li>Karlův most</li>
+            <li>Staroměstské náměstí</li>
+            <li>Petřínská rozhledna</li>
+        </ul>
+    </div>
+    
     <h3>Doporučené pořadí návštěvy</h3>
-    <ol>
-        <li>Pražský hrad</li>
-        <li>Karlův most</li>
-        <li>Staroměstské náměstí</li>
-        <li>Petřínská rozhledna</li>
-    </ol>
+
+    <div class="seznam">
+        <ol>
+            <li>Pražský hrad</li>
+            <li>Karlův most</li>
+            <li>Staroměstské náměstí</li>
+            <li>Petřínská rozhledna</li>
+        </ol>
+    </div>
+    
     <h3>Výklad pojmů</h3>
-    <dl>
-        <strong><dt>Pražský hrad</dt></strong>
-        <dd>Největší hradní komplex v České republice.</dd>
-        <strong><dt>Karlův most</dt></strong>
-        <dd>Historický kamenný most přes Vltavu.</dd>
-        <strong><dt>Orloj</dt></strong>
-        <dd>Středověké astronomické hodiny na Staroměstské radnici.</dd>
-    </dl>
+
+    <div class="seznam vyklad">
+        <dl>
+            <strong><dt>Pražský hrad</dt></strong>
+            <dd>Největší hradní komplex v České republice.</dd>
+            <strong><dt>Karlův most</dt></strong>
+            <dd>Historický kamenný most přes Vltavu.</dd>
+            <strong><dt>Orloj</dt></strong>
+            <dd>Středověké astronomické hodiny na Staroměstské radnici.</dd>
+        </dl>
+    </div>
+    
+
     <hr>
+
     <h2>Fotogalerie</h2>
     <p>Pražský hrad:</p>
     <img src="./prazsky_hrad.webp" alt="Pražský hrad" title="Pražský hrad" width="200px">
     <p>Více naleznete na <a href="https://prague.eu/cs/">oficiálním turistickém portálu Prahy</a>.</p>
+
     <hr>
+
     <h2 id="navstevnost">Návštěvnost památek (v tisících návštěvníků)</h2>
-    <table border="1px">
-        <tr>
+    <table>
+        <tr class="table1">
             <th rowspan="2">Památka</th>
             <th colspan="2">Rok 2023</th>
             <th colspan="2">Rok 2024</th>
         </tr>
-        <tr>
+        <tr class="table1">
             <th>1. pololetí</th>
             <th>2. pololetí</th>
             <th>1. pololetí</th>
             <th>2. pololetí</th>
         </tr>
-        <tr>
+        <tr class="table2">
             <td>Pražský hrad</td>
             <td>800</td>
             <td>950</td>
             <td>850</td>
             <td>1000</td>
         </tr>
-        <tr>
+        <tr class="table3">
             <td>Karlův most</td>
             <td>700</td>
             <td>850</td>
             <td>750</td>
             <td>900</td>
         </tr>
-        <tr>
+        <tr class="table2">
             <td>Petřínská rozhledna</td>
             <td>300</td>
             <td>400</td>
@@ -105,7 +188,9 @@
             <td>450</td>
         </tr>
     </table>
+
     <hr>
+
     <h2 id="entity">Znakové entity</h2>
     <p>
         Symbol menší než: &lt;<br>
@@ -115,10 +200,15 @@
         Euro: &euro;  <br>
         Pevná mezera:&nbsp;Praha&nbsp;1
     </p>
+
     <hr>
+
     <h2>Konec stránky</h2>
-    <p>Děkujeme za návštěvu této ukázkové stránky o Praze.</p>
-    <p><a href="#zacatek">Zpět na začátek stránky</a></p>
+    <div class="footer">
+        <p>Děkujeme za návštěvu této ukázkové stránky o Praze.</p>
+        <p><a href="#zacatek">Zpět na začátek stránky</a></p>
+    </div>
+    
 
 
 
