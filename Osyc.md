@@ -30,4 +30,10 @@
   - res=$1 = zalozit promenu s 1 parametrem
   - cesta=~/ = ulozit cestu /home/sysadmin/
   - bash -x skript.bash = spustit ladeni pro chyby
+  - read result = zalozit promenu result = co zada uzivatel
+  - if [ "&result" == "ANO" ]; then
+    - echo "vysledek: &result"
+  - else
+    - echo "..."
+  - fi  = operace if
 
