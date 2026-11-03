@@ -36,4 +36,19 @@
   - else
     - echo "..."
   - fi  = operace if
+  - for (( a=1 ; $a-10 ; a=$a+1 )); 
+    - do echo $a 
+  - done
+  - while true; do 
+    - uptime = prikaz linux systemu 
+    - sleep 1 = ukoncit cyklus za 1 sekundu
+  - done 
+- zcat archiv.gz = rozbalit a vypsat obsah zip
+- apt update = obnovit nastaveni systemu
+- apt install ftp = instalovat ftp
+- ftp 127.0.0.5 = pripojit na server
+- systemctl status vsftpd = status konf souboru
+- sudo systemctl disable vsftpd = vypnout ftp, prestane bezet vsak po reboot PC
+- sudo systemctl enable vsftpd = zapnout, vsak kdyz nebezi tak zacne jenom po reboot
+- sudo systemctl start vsftpd = spustit
 
