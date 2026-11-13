@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js"></script>
+</head>
+<style>
+    #colored {
+        background-color: grey;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+
+    .form {
+        border: 1px solid black;
+        border-radius: 3px;
+        width: 500px;
+        padding: 10px;
+        margin: 15px;
+    }
+</style>
+<body>
+    <div>
+        <div class="form">
+            <input type="text" id="vstup">
+            <button onclick="setText()">enter</button>
+            <p id="text">Tento text se zmeni</p>
+        </div>
+        <div class="form">
+            <p>Napis barvu</p>
+            <input type="text" id="vstupColor">
+            <button onclick="setColor()">SETCOLOR</button>
+            <p>TEST</p>
+            <div id="colored"></div>
+        </div>
+        <div class="form">
+            <input type="number" id="vstupCislo">
+            <button onclick="calcNumber()">napis cislo</button>
+            <p id="number">Zadej cislo...</p>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
