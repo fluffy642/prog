@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+</style>
+<body>
+    <form id="form1">
+        <p>Zadej vahu: <input type="number" id="vaha"></p>
+        <p>Zadej vysku: <input type="number" id="vyska"></p>
+        <button type="button" onclick="button()">Zjisti BMI</button>
+        <p id="result"></p>
+    </form>
+    <form id="form2">
+        
+        <img src="https://th.bing.com/th/id/OIP.6RcnW-Qb_jvGWrV3xkd6OAHaHa?w=201&h=201&c=7&r=0&o=7&pid=1.7&rm=3" alt="sad" id="img">
+        <p>Zadej znamku: <input type="number" id="znamka" onchange="zmena()"></p>
+        <button type="button" onclick="zmena()">SUBMIT</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
